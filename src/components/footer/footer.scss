@@ -1,0 +1,73 @@
+.footer {
+  position: relative;
+  img {
+    width: 50px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  .linksForContact {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 100px;
+    gap: 120px;
+    color: #fff;
+    font-family: sans-serif;
+
+    .link {
+      display: flex;
+      gap: 70px;
+      flex-wrap: wrap;
+
+      p:hover {
+        color: red;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .texts {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: #fff;
+    font-family: sans-serif;
+
+    .link {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      img {
+        object-fit: contain;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  position: absolute;
+  border-top: solid 1px white;
+  justify-content: space-around;
+  width: 100%;
+  color: #fff;
+  bottom: 20px;
+
+  span {
+    position: relative;
+    top: 13px;
+    cursor: pointer;
+  }
+
+  div {
+    display: flex;
+    gap: 30px;
+
+    p {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+.teamPage {
+  width: 100%;
+  height: 100vh;
+  background: #111827;
+  backdrop-filter: blur(33px);
+
+  h5 {
+    text-align: center;
+    align-items: center;
+    font-size: 40px;
+    color: #fff;
+    padding-top: 20px;
+  }
+
+  p {
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    padding-top: 40px;
+  }
+
+  .listOfWorkes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    gap: 70px;
+    .aboutUsers {
+      width: 270px;
+      height: 266px;
+      flex-shrink: 0;
+      border-radius: 34px;
+      background: linear-gradient(
+        268deg,
+        rgba(254, 254, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0.02) 100%
+      );
+
+      box-shadow: 0px 22px 18px 0px rgba(0, 0, 0, 0.05);
+    }
+
+    .aboutUsers {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .photoOfWorker {
+        width: 120px;
+        height: 120px;
+      }
+
+      .nameOfWorker {
+        color: #fff;
+        font-weight: 700;
+        font-size: 30px;
+        position: relative;
+        bottom: 20px;
+      }
+
+      .jobOfWorker {
+        color: #fff;
+        font-weight: 200;
+        font-size: 20px;
+        position: relative;
+        bottom: 20px;
+      }
+
+      .contactLinks {
+        display: flex;
+        gap: 30px;
+      }
+    }
+  }
+}

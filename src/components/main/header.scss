@@ -1,0 +1,202 @@
+.mainPage {
+  header {
+    display: flex;
+    padding-left: 100px;
+    padding-top: 40px;
+
+    button {
+      border-radius: 5px;
+      background: var(
+        --gradient,
+        linear-gradient(91deg, #2563eb 0%, #d946ef 100%)
+      );
+      border: none;
+      color: #f9fafb;
+      width: 100px;
+      height: 40px;
+    }
+
+    .links {
+      display: flex;
+      margin-left: auto;
+      padding-right: 100px;
+      gap: 60px;
+      text-align: center;
+      align-items: center;
+
+      .link {
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+
+        a {
+          font-size: 20px;
+          color: #f9fafb;
+          font-size: 18px;
+          font-family: sans-serif;
+          font-style: normal;
+          text-decoration: none;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+
+      img {
+        width: 34.251px;
+        height: 34.251px;
+        object-fit: contain;
+        flex-shrink: 0;
+        padding-left: 100px;
+      }
+    }
+  }
+
+  // Kichik ekranlarda header elementini bo'lishuvi
+  @media (max-width: 768px) {
+    header {
+      padding-left: 0;
+      padding-top: 20px;
+    }
+
+    .links {
+      margin-left: 0;
+      padding-right: 30px;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .link {
+      gap: 20px;
+    }
+
+    .mainPage {
+      img {
+        width: 33px;
+        height: 33px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  // Kichik ekranlarda linklar elementini tartiblash
+  @media (max-width: 950px) {
+    section header {
+      display: flex;
+      justify-content: center;
+      padding-top: 30px;
+    }
+
+    .link {
+      display: none;
+    }
+
+    .links {
+      button {
+        margin-left: auto;
+        width: 80px;
+        height: 30px;
+        font-size: 12px;
+      }
+    }
+
+    .links .link a {
+      display: none;
+    }
+
+    .cont {
+      display: block;
+    }
+
+    .mainPage {
+      img {
+        width: 33px;
+        height: 33px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  // Har qanday telefon pikselida ham yaxshi korinsin
+  @media (max-width: 400px) {
+    header {
+      padding-left: 10px;
+      padding-top: 10px;
+    }
+
+    .links {
+      padding-right: 20px;
+      gap: 10px;
+    }
+
+    button {
+      width: 70px;
+      height: 25px;
+      font-size: 10px;
+    }
+
+    .link a {
+      font-size: 14px;
+    }
+
+    .mainPage {
+      img {
+        width: 33px;
+        height: 33px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.cont {
+  position: relative;
+  padding: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-toggle {
+  position: absolute;
+  right: 1.5rem;
+  top: 49%;
+  transform: translate(0, -50%);
+  height: 26px;
+  width: 29px;
+
+  &,
+  &:hover {
+    color: #f9fafb;
+  }
+}
+
+.menu-toggle-bar {
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #f9fafb;
+  transition: all 0.3s ease;
+
+  &.menu-toggle-bar--top {
+    transform: translate(0, -8px);
+  }
+  &.menu-toggle-bar--bottom {
+    transform: translate(0, 8px);
+  }
+
+  .nav-open & {
+    &.menu-toggle-bar--top {
+      transform: translate(0, 0) rotate(45deg);
+    }
+    &.menu-toggle-bar--middle {
+      opacity: 0;
+    }
+    &.menu-toggle-bar--bottom {
+      transform: translate(0, 0) rotate(-45deg);
+    }
+  }
+}
